@@ -4,6 +4,7 @@
     --very-dark-cyan: hsl(192, 100%, 9%);
     --grayish-blue: hsl(208, 11%, 55%);
     --soft-black: hsla(0, 0%, 0%, 10%);
+    --white: hsl(0, 0%, 100%);
 }
 
 @font-face {
@@ -52,10 +53,31 @@ ul {
     list-style: none;
 }
 
-.header,
+h1,
+h2 {
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar,
 .hero,
+.card-container,
 .footer {
     padding-inline: 40px;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.navbar__button,
+.hero__button {
+    border-radius: 40px;
+    font-size: .85em;
+    font-weight: 700;
+    box-shadow: 2px 2px 20px var(--soft-black);
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    padding: 1em 3.2em;
 }
 
 .header {
@@ -67,16 +89,51 @@ ul {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    padding-block: 2em;
 }
 
-.hero {
+.navbar__button {
+    background-color: var(--white);
+    color: var(
+    --very-dark-cyan);
+}
+
+.hero-container {
     background-color: var(--very-pale-cyan);
     background-image: url("./images/bg-hero-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 8em;
+    padding-bottom: 3.5em;
+}
+
+.hero {
+    align-items: center;
     display: flex;
-    padding-top: 120px;
-    padding-bottom: 50px;
+    gap: 1.5em;
+}
+
+.hero__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2em;
+}
+
+.hero__title {
+    font-size: 2.4em;
+}
+
+.hero__button {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 7em 4em;
 }
 
 .card {
@@ -84,8 +141,40 @@ ul {
     border-radius: 12px;
     box-shadow: 0 0 10px var(--soft-black);
     display: flex;
+    padding: 3em 2em 3em 6em;
+    gap: 5em;
 }
 
 .card:nth-child(even) {
     flex-direction: row-reverse;
+}
+
+.card__details {
+    flex-basis: 55%;
+}
+
+.card__image-container {
+    flex-basis: 45%;
+}
+
+.card__paragraph {
+    color: var(--grayish-blue);
+}
+
+.footer-container {
+    background-color: var(--very-dark-cyan);
+}
+
+.footer__link-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6em;
+}
+
+.footer__links:first-child {
+    grid-column: 1 / span 2;
+}
+
+.footer__links:last-child {
+    display: flex;
 }
