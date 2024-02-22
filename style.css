@@ -134,7 +134,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 2em;
-    padding: 7em 4em;
+    padding: 7em 4em 14em 4em;
 }
 
 .card {
@@ -191,6 +191,12 @@ h2 {
     text-align: center;
 }
 
+.footer {
+    color: var(--white);
+    padding-top: 8.5em;
+    padding-bottom: 3em;
+}
+
 .footer__link-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -203,4 +209,13 @@ h2 {
 
 .footer__links:last-child {
     display: flex;
+}
+
+.footer__link {
+    display: flex;
+    gap: 1.5em;
+}
+
+.footer__link-icon {
+    min-width: fit-content;
 }
